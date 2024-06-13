@@ -24,7 +24,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     re_path('^$', views.index, name='homepage'),
     re_path('predictImage', views.predictImage, name='predictImage'),
-    re_path('viewDataBase', views.viewDataBase, name='viewDataBase')
+    re_path('viewDataBase', views.viewDataBase, name='viewDataBase'),
+     path('predict-image-url/', views.predict_image_from_url, name='predict_image_from_url'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
