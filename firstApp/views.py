@@ -51,7 +51,6 @@ def viewDataBase(request):
     context = {'imagesPaths': imagesPaths}
     return render(request, 'viewDB.html', context)
 
-
 @require_GET
 def predict_image_from_url(request):
     image_url = request.GET.get('image_url')

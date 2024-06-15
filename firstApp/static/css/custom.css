@@ -1,0 +1,136 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container Styling */
+.container-fluid {
+    padding: 0;
+    width: 100%;
+}
+
+/* Header Styling */
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #343a40 !important;
+    border-color: #343a40 !important;
+    width: 100%;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-nav > li > a {
+    color: #fff !important;
+}
+
+.navbar-nav > li > a:hover {
+    color: #17a2b8 !important;
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 20px;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group label {
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+/* Result Styling */
+.result-container {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.result-container p {
+    font-size: 18px;
+}
+
+.img-thumbnail {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 10px;
+    }
+
+    .form-container,
+    .result-container {
+        width: 100%;
+    }
+}
