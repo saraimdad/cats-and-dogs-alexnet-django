@@ -1,10 +1,20 @@
-
 {% extends 'headerPage.html' %}
 
 {% block content%}
-
-{% for i in imagesPaths %}
-<img src={{i}} style="width: 100px;"> <br>
-{% endfor%}
-
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <div class="col-md-9 main-content">
+            <h3>Image Gallery</h3>
+            <div class="row">
+                {% for imagePath in imagesPaths %}
+                <div class="col-md-3 col-sm-4">
+                    <div class="thumbnail">
+                        <img src="{{ imagePath }}" alt="Image" class="img-responsive">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

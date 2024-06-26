@@ -1,24 +1,29 @@
 {% extends 'headerPage.html' %}
 
-{% block content%} 
+{% block content %}
+<div class="container-fluid main-container">
+    <div class="row no-gutters">
+        <div class="col-md-12 main-content">
+            <form method="post" enctype="multipart/form-data" action="predictImage" class="form-container">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="filePath">Upload Image File Here:</label>
+                    <input name="filePath" type="file" class="form-control" id="filePath">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <br>
+            <h3>Result</h3>
+            {% if predictedLabel %}
+                <div class="result-container">
+                    <p><strong>Prediction:</strong> {{predictedLabel}}</p>
+                    <p><strong>Confidence:</strong> {{confidence}}%</p>
+                    <img src="{{filePathName}}" alt="Predicted Image" class="img-thumbnail">
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
 <br>
-   
-<form method="post" enctype="multipart/form-data" action="predictImage">
-  
-{% csrf_token %}
-<div class="col-md-4 col-sm-4"><label for="fname">Upload Image File Here:</label> </div> <input name="filePath" type="file"><br><br>
-
-<br>
- 
-<input type="submit" value="Submit" ></div>
-
-<h3>Result</h3>
-<p>Prediction: {{predictedLabel}}</p>
-<p>Confidence: {{confidence}}</p>
-<img src={{filePathName}} alt='imagename' style="width: 200px;">
-
-</form>
-<br>
-
-
 {% endblock %}
